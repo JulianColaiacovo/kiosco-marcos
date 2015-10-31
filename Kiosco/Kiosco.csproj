@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F74B7D7C-D0AD-49E0-8224-845C334CA68A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiosco</RootNamespace>
+    <AssemblyName>Kiosco</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commons\ListBox2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchaseItemCart\QuantityUnitPrice.cs" />
+    <Compile Include="PurchaseItemCart\QuantityUnitPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseItemCart\QuantityUnitPriceForm.Designer.cs">
+      <DependentUpon>QuantityUnitPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductActions.Designer.cs">
+      <DependentUpon>FormProductActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProviderActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProviderActions.Designer.cs">
+      <DependentUpon>FormProviderActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProviderPhoneActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProviderPhoneActions.Designer.cs">
+      <DependentUpon>FormProviderPhoneActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_inicio.Designer.cs">
+      <DependentUpon>Form_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActionsEnum.cs" />
+    <Compile Include="ProductsTab\ProductsSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductsTab\ProductsSelect.Designer.cs">
+      <DependentUpon>ProductsSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvidersTab\ProvidersSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProvidersTab\ProvidersSelect.Designer.cs">
+      <DependentUpon>ProvidersSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchasesTab\Elements\PurchaseItem.cs" />
+    <Compile Include="PurchasesTab\PurchaseCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PurchasesTab\PurchaseCart.Designer.cs">
+      <DependentUpon>PurchaseCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleItemCart\QuantityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleItemCart\QuantityForm.Designer.cs">
+      <DependentUpon>QuantityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesTab\Elements\SaleItem.cs" />
+    <Compile Include="SalesTab\SaleCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SalesTab\SaleCart.Designer.cs">
+      <DependentUpon>SaleCart.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PurchaseItemCart\QuantityUnitPriceForm.resx">
+      <DependentUpon>QuantityUnitPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductActions.resx">
+      <DependentUpon>FormProductActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProviderActions.resx">
+      <DependentUpon>FormProviderActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProviderPhoneActions.resx">
+      <DependentUpon>FormProviderPhoneActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_inicio.resx">
+      <DependentUpon>Form_inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsTab\ProductsSelect.resx">
+      <DependentUpon>ProductsSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ProvidersTab\ProvidersSelect.resx">
+      <DependentUpon>ProvidersSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchasesTab\PurchaseCart.resx">
+      <DependentUpon>PurchaseCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleItemCart\QuantityForm.resx">
+      <DependentUpon>QuantityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesTab\SaleCart.resx">
+      <DependentUpon>SaleCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{4a6d4138-51ae-4231-99a7-ea036138d6d9}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
